@@ -1,0 +1,32 @@
+#ip 4
+seti 123 0 3        --> [3] = 123; [4] += 1
+bani 3 456 3        --> [3] = 123 & 456 (=72); [4] += 1
+eqri 3 72 3         --> if [3] == 72 --> [3] = 1 else [3] = 0; [4] += 1
+addr 3 4 4          --> [4] += 1 + [3] Note --> skip next line
+seti 0 0 4          --> [4] = 1 --> Loop to line 1
+seti 0 5 3          --> [3] = 0; [4] += 1
+bori 3 65536 2      --> [2] = [3] | 65536
+seti 10736359 9 3   --> [3] = 10736359
+bani 2 255 1        --> [1] = 65536 & 255
+addr 3 1 3          --> [3] = [3] + 1
+bani 3 16777215 3
+muli 3 65899 3
+bani 3 16777215 3
+gtir 256 2 1
+addr 1 4 4
+addi 4 1 4
+seti 27 2 4
+seti 0 3 1
+addi 1 1 5
+muli 5 256 5
+gtrr 5 2 5
+addr 5 4 4
+addi 4 1 4
+seti 25 8 4
+addi 1 1 1
+seti 17 6 4 --> Loop to line
+setr 1 5 2
+seti 7 7 4
+eqrr 3 0 1          --> if [0] == [3] --> [1] = 1 else [1] = 0
+addr 1 4 4
+seti 5 1 4
